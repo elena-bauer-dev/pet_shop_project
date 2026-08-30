@@ -1,0 +1,26 @@
+.promo {
+  position: relative;
+}
+.inner {
+  position: absolute;
+  inset: 0;
+}
+.bg {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  height: 600px;
+}
+
+.text {
+  margin-top: 80px;
+  margin-bottom: 40px;
+  font-size: 96px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.card__btn {
+  width: 100%;
+  max-width: 218px;
+}
