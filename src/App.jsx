@@ -1,19 +1,28 @@
-import Header from './components/Header';
-import Home from './components/Home';
-import CategoriesList from './components/CategoriesList';
-import Promo from './components/Promo';
+import { Routes, Route } from 'react-router-dom';
+
+import MainLayout from './layouts/MainLayout';
+import Home from './pages/Home';
+
 import './App.css';
+import Categories from './pages/Categories';
 
 function App() {
   return (
-    <>
-      <Header />
-      <main>
-        <Home />
-        <CategoriesList />
-        <Promo />
-      </main>
-    </>
+    <Routes>
+      <Route
+        path="/"
+        element={<MainLayout />}
+      >
+        <Route
+          index
+          element={<Home />}
+        />
+        <Route
+          path="categories"
+          element={<Categories />}
+        />
+      </Route>
+    </Routes>
   );
 }
 

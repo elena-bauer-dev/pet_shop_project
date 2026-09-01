@@ -1,65 +1,52 @@
+import { Link, NavLink } from 'react-router-dom';
 import Logo from '@/assets/icons/logo.svg';
 import Cart from '@/assets/icons/cart.svg';
 import styles from './Header.module.css';
+
+const NavItems = [
+  { to: '/', label: "Main Page" },
+  { to: '/categories', label: "Categories" },
+  { to: '/products', label: "All Products" },
+  { to: '/sales', label: "All sales" }
+];
+
 
 function Header() {
   return (
     <header>
       <div className="container">
         <div className={styles.inner}>
-          <a href="#">
+          <Link to="/">
             <img
               className={styles.logo}
               src={Logo}
               alt="logo"
             />
-          </a>
+          </Link>
           <nav className={styles.nav}>
             <ul className={styles.list}>
-              <li>
-                <a
-                  href=""
+            {NavItems.map(({to, label}) => (
+              <li key={to}>
+                  <NavLink
+                  to={to}
                   className={styles.link}
-                >
-                  Main Page
-                </a>
+                  >
+                    {label}
+                  </NavLink>
               </li>
-              <li>
-                <a
-                  href=""
-                  className={styles.link}
-                >
-                  Categories
-                </a>
-              </li>
-              <li>
-                <a
-                  href=""
-                  className={styles.link}
-                >
-                  All products
-                </a>
-              </li>
-              <li>
-                <a
-                  href=""
-                  className={styles.link}
-                >
-                  All sales
-                </a>
-              </li>
+            ))}
             </ul>
           </nav>
-          <button
+          <Link
+          to="/cart"
             className={styles.cart}
-            type="button"
           >
             <img
               className={styles.cartIcon}
               src={Cart}
               alt="cart"
             />
-          </button>
+          </Link>
         </div>
       </div>
     </header>

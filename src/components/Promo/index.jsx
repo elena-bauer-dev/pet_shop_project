@@ -1,6 +1,6 @@
 import styles from './Promo.module.css';
 import Content from '../../assets/bg/content.png';
-import Button from '../UI/Button/index.jsx';
+import Button from '../../Button/index.jsx';
 import { useState } from 'react';
 
 function Promo() {
@@ -26,7 +26,7 @@ function Promo() {
             onSubmit={handleSubmit}
           >
             <input
-              className={styles.input} 
+              className={styles.input}
               type="text"
               placeholder="Name"
             />

@@ -1,9 +1,8 @@
 import styles from './Home.module.css';
 import BG from '../../assets/bg/img.jpg';
-import Button from '../UI/Button/index.jsx';
+import Button from '../../Button/index.jsx';
 
 export default function Home() {
-
   return (
     <section className={styles.promo}>
       <img
