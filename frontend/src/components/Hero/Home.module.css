@@ -1,0 +1,97 @@
+.promo {
+  position: relative;
+  margin-bottom: 80px;
+}
+.inner {
+  position: absolute;
+  inset: 0;
+}
+.bg {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  height: 600px;
+}
+
+.text {
+  margin-top: 80px;
+  margin-bottom: 40px;
+  font-size: 96px;
+  font-weight: 700;
+  color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 16px;
+
+  overflow: hidden;
+
+  font-weight: 700;
+  line-height: 110%;
+  color: #fff;
+}
+
+.text span {
+  display: inline-block;
+
+  opacity: 0;
+
+  animation: bounceIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Последовательное появление слов */
+
+.text span:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.text span:nth-child(2) {
+  animation-delay: 0.25s;
+}
+
+.text span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.text span:nth-child(4) {
+  animation-delay: 0.55s;
+}
+
+.text span:nth-child(5) {
+  animation-delay: 0.7s;
+}
+
+/* Падение + отскок */
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-180px);
+  }
+
+  55% {
+    opacity: 1;
+    transform: translateY(20px);
+  }
+
+  70% {
+    transform: translateY(-10px);
+  }
+
+  82% {
+    transform: translateY(5px);
+  }
+
+  92% {
+    transform: translateY(-2px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card__btn {
+  width: 100%;
+  max-width: 218px;
+}

@@ -1,0 +1,44 @@
+.promo {
+  margin-top: 106px;
+  padding: 32px 32px 0 32px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: linear-gradient(261.47deg, #2451c6 32.71%, #0d50ff 98.97%);
+}
+.title {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 110%;
+  text-align: center;
+  color: #fff;
+}
+.content {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 500px);
+  gap: 40px;
+  align-items: end;
+}
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: var(--gap);
+}
+
+.input {
+  padding: 16px 32px;
+  background-color: var(--btn-bg);
+  border-radius: 6px;
+  border: 1px solid #ffffff;
+}
+
+.input::placeholder {
+  color: #ffffff;
+}

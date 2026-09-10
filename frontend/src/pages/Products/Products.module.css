@@ -1,0 +1,96 @@
+/* Заголовок */
+.productsPage h1 {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 110%;
+  margin: 0 0 15px;
+  margin-bottom: 40px;
+}
+
+/* Фильтры */
+/* .filters {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 14px;
+} */
+
+/* .filters > span {
+  margin-right: 5px;
+} */
+/* 
+.filters input[type='text'],
+.filters input:not([type]) {
+  width: 55px;
+  height: 30px;
+  padding: 0 8px;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  box-sizing: border-box;
+} */
+
+/* .checkbox {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-left: 15px;
+  cursor: pointer;
+} */
+/* 
+.checkbox input {
+  width: 16px;
+  height: 16px;
+} */
+
+/* Сортировка */
+/* .sort {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+} */
+
+/* .sort select {
+  width: 105px;
+  height: 30px;
+  padding: 0 5px;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  background: white;
+} */
+
+/* Сетка товаров */
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  width: 100%;
+}
+
+/* Адаптация */
+@media (max-width: 900px) {
+  .cardsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .productsPage {
+    padding: 0 15px;
+  }
+
+  .cardsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .filters {
+    flex-wrap: wrap;
+  }
+
+  .sort {
+    margin-left: 0;
+    width: 100%;
+  }
+}

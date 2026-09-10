@@ -1,0 +1,137 @@
+/* .salesPage {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 24px 0;
+  box-sizing: border-box;
+} */
+
+.title {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 110%;
+  margin-bottom: 40px;
+}
+/* FILTERS */
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.priceFilter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.priceFilter span,
+.sort span {
+  font-size: 14px;
+}
+
+.priceFilter input {
+  width: 58px;
+  height: 28px;
+  padding: 0 8px;
+  box-sizing: border-box;
+  border: 1px solid #d5d5d5;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+.priceFilter input::placeholder {
+  color: #999;
+}
+
+/* SORT */
+
+.sort {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sort select {
+  width: 105px;
+  height: 28px;
+  padding: 0 8px;
+  border: 1px solid #d5d5d5;
+  border-radius: 4px;
+  background: white;
+  font-size: 13px;
+}
+
+/* CARDS */
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  width: 100%;
+}
+
+/* CARD COMPONENT */
+
+.cardsGrid > article {
+  width: 100%;
+  min-width: 0;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .salesPage {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .cardsGrid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .salesPage {
+    padding: 16px;
+  }
+
+  .salesPage h1 {
+    font-size: 28px;
+  }
+
+  .filters {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .sort {
+    margin-left: auto;
+  }
+
+  .cardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+@media (max-width: 450px) {
+  .cardsGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .priceFilter input {
+    width: 55px;
+  }
+
+  .sort select {
+    width: 95px;
+  }
+}

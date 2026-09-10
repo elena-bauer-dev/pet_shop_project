@@ -1,0 +1,106 @@
+.crumbs {
+  margin-bottom: 40px;
+}
+
+/* Список хлебных крошек */
+.crumbs ul {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Каждый элемент */
+.crumbs li {
+  display: flex;
+  align-items: center;
+}
+
+/* Разделительная линия между крошками */
+.crumbs li:not(:last-child)::after {
+  content: '';
+  width: 16px;
+  height: 1px;
+  margin: 0 0;
+  background-color: #dddddd;
+
+  transition:
+    width 0.25s ease,
+    background-color 0.25s ease;
+}
+
+/* Общий стиль для ссылок и текущей страницы */
+.crumbs a,
+.crumbs span {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 36px;
+  padding: 8px 16px;
+
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+
+  background-color: #fff;
+
+  font-size: 16px;
+  line-height: 1;
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+/* Ссылки */
+.crumbs a {
+  color: #999999;
+}
+
+/* Текущая страница */
+.crumbs span {
+  color: #222222;
+}
+
+/* Hover ссылки */
+.crumbs a:hover {
+  color: #0d50ff;
+  border-color: #0d50ff;
+  transform: translateY(-2px);
+}
+
+/* Синяя линия внутри ссылки */
+.crumbs a::after {
+  content: '';
+
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  bottom: 4px;
+
+  height: 2px;
+
+  background-color: #0d50ff;
+
+  transform: scaleX(0);
+  transform-origin: center;
+
+  transition: transform 0.25s ease;
+}
+
+/* Появление линии при наведении */
+.crumbs a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Разделительная линия реагирует на hover соседней ссылки */
+.crumbs li:not(:last-child):has(a:hover)::after {
+  width: 20px;
+  background-color: #0d50ff;
+}

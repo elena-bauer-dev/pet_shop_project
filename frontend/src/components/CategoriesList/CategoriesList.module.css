@@ -1,0 +1,17 @@
+.title {
+  /* margin-top: 80px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 110%;
+  color: #282828; */
+}
+.categories {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.categories_card {
+}

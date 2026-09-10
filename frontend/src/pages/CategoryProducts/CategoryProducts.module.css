@@ -1,0 +1,19 @@
+.categoryPage {
+  width: 100%;
+}
+
+/* Breadcrumbs */
+.categoryPage :global(.crumbs) {
+  margin-bottom: 24px;
+}
+
+/* Заголовок */
+.title {
+  margin: 0 0 40px;
+
+  font-size: 64px;
+  line-height: 110%;
+  font-weight: 700;
+
+  color: #282828;
+}

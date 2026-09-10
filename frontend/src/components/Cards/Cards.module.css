@@ -1,0 +1,97 @@
+.card {
+  display: block;
+  width: 100%;
+  min-width: 0;
+
+  text-decoration: none;
+  color: #111;
+
+  border: 1px solid #ddd;
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.card__btn {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.card__btn:hover {
+  transform: scale(1.02);
+
+  box-shadow: 0 4px 12px rgba(13, 80, 255, 0.25);
+}
+.card:hover {
+  transform: translateY(-6px);
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 422px;
+  overflow: hidden;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.4s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.04);
+}
+
+.discount {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #0d50ff;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 130%;
+  letter-spacing: 0.03em;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 6px;
+  z-index: 2;
+}
+
+.card h3 {
+  margin: 20px 32px 16px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 130%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #282828;
+}
+
+.price {
+  margin: 0 32px 32px;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 110%;
+  color: #282828;
+}
+
+.price del {
+  margin-left: 16px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 130%;
+  text-decoration: line-through;
+  color: #8b8b8b;
+}
