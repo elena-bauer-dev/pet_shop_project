@@ -1,10 +1,4 @@
-/* .salesPage {
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 20px 24px 0;
-  box-sizing: border-box;
-} */
+
 
 .title {
   font-weight: 700;
@@ -12,7 +6,6 @@
   line-height: 110%;
   margin-bottom: 40px;
 }
-/* FILTERS */
 
 .filters {
   display: flex;
@@ -47,7 +40,6 @@
   color: #999;
 }
 
-/* SORT */
 
 .sort {
   display: flex;
@@ -65,7 +57,6 @@
   font-size: 13px;
 }
 
-/* CARDS */
 
 .cardsGrid {
   display: grid;
@@ -74,14 +65,12 @@
   width: 100%;
 }
 
-/* CARD COMPONENT */
 
 .cardsGrid > article {
   width: 100%;
   min-width: 0;
 }
 
-/* TABLET */
 
 @media (max-width: 900px) {
   .salesPage {
@@ -95,7 +84,6 @@
   }
 }
 
-/* MOBILE */
 
 @media (max-width: 700px) {
   .salesPage {

@@ -183,23 +183,47 @@ function Cart() {
                   placeholder="Name"
                   autoComplete="name"
                   {...register('name', {
-                    required: 'Введите',
-                    minLength: { value: 2, message: 'минимум 2 символа' },
+                    required: 'Введите имя',
+                    minLength: {
+                      value: 2,
+                      message: 'Минимум 2 символа',
+                    },
                   })}
                 />
-                {errors.name && <p>{errors.name.messages}</p>}
+
+                {errors.name && <p>{errors.name.message}</p>}
 
                 <input
                   type="tel"
                   placeholder="Phone number"
-                  required
+                  autoComplete="tel"
+                  {...register('phone', {
+                    required: 'Введите номер телефона',
+                    pattern: {
+                      value: /^\+?[0-9\s\-()]{7,20}$/,
+                      message: 'Введите корректный номер телефона',
+                    },
+                  })}
                 />
+
+                {errors.phone && <p>{errors.phone.message}</p>}
 
                 <input
                   type="email"
                   placeholder="Email"
-                  required
+                  autoComplete="email"
+                  {...register('email', {
+                    required: 'Введите email',
+                    pattern: {
+                      value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                      message: 'Введите корректный email',
+                    },
+                  })}
                 />
+
+                {errors.email && <p>{errors.email.message}</p>}
+
+                {serverError && <p>{serverError}</p>}
 
                 <button type="submit">
                   {isSubmitting ? 'Отправка' : 'Order'}

@@ -1,5 +1,4 @@
 import Hero from '../../components/Hero';
-// import CategoriesList from '../../components/CategoriesList';
 import Promo from '../../components/Promo';
 import Products from '../../components/Products';
 import Categories from '../../components/Categories';
@@ -11,7 +10,6 @@ function Home() {
   return (
     <>
       <Hero />
-      {/* <CategoriesList /> */}
       <div className="container">
         <Categories items={categories.slice(0, 4)} />
       </div>

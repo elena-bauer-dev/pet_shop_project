@@ -4,7 +4,6 @@
   align-items: center;
 }
 
-/* 4 + dog + 4 */
 .errorImage {
   display: flex;
   align-items: center;
@@ -13,20 +12,17 @@
   margin-bottom: 15px;
 }
 
-/* цифры 4 */
 .errorImage > img:not(.mainImage) {
   width: 180px;
   height: auto;
 }
 
-/* собачка */
 .errorImage > .mainImage {
   width: 300px;
   height: 270px;
   object-fit: contain;
 }
 
-/* Page Not Found */
 .errorTitle {
   margin: 0 0 16px;
 
@@ -38,7 +34,6 @@
   color: #282828;
 }
 
-/* текст */
 .errorText {
   max-width: 400px;
   margin: 0 0 32px;
@@ -51,7 +46,6 @@
   color: #8b8b8b;
 }
 
-/* кнопка */
 .card__btn{
   border-radius: 6px;
 padding: 16px 56px;
