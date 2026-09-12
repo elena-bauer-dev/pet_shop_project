@@ -46,9 +46,94 @@
   color: #8b8b8b;
 }
 
-.card__btn{
+.card__btn {
   border-radius: 6px;
-padding: 16px 56px;
-width: 209px;
-height: 58px;
+  padding: 16px 56px;
+  width: 209px;
+  height: 58px;
+}
+@media (max-width: 900px) {
+  .errorImage {
+    gap: 10px;
+  }
+
+  .errorImage > img:not(.mainImage) {
+    width: 140px;
+  }
+
+  .errorImage > .mainImage {
+    width: 240px;
+    height: 220px;
+  }
+
+  .errorTitle {
+    font-size: 52px;
+  }
+
+  .errorText {
+    max-width: 360px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 700px) {
+  .errorImage {
+    gap: 8px;
+  }
+
+  .errorImage > img:not(.mainImage) {
+    width: 110px;
+  }
+
+  .errorImage > .mainImage {
+    width: 200px;
+    height: 180px;
+  }
+
+  .errorTitle {
+    font-size: 44px;
+  }
+
+  .errorText {
+    max-width: 320px;
+    font-size: 17px;
+  }
+
+  .card__btn {
+    width: 190px;
+    height: 54px;
+    padding: 14px 32px;
+  }
+}
+
+@media (max-width: 450px) {
+  .errorImage {
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+
+  .errorImage > img:not(.mainImage) {
+    width: 80px;
+  }
+
+  .errorImage > .mainImage {
+    width: 150px;
+    height: 140px;
+  }
+
+  .errorTitle {
+    font-size: 32px;
+  }
+
+  .errorText {
+    max-width: 280px;
+    padding: 0 16px;
+    font-size: 16px;
+  }
+
+  .card__btn {
+    width: 180px;
+    height: 52px;
+    padding: 14px 24px;
+  }
 }

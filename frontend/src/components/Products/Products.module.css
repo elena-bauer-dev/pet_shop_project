@@ -3,13 +3,13 @@
   align-items: center;
   margin-top: 80px;
   margin-bottom: 32px;
+  gap: 20px;
 }
 
 .title {
   display: flex;
   align-items: center;
   flex: 1;
-
   margin: 0;
   font-size: 64px;
   font-weight: 700;
@@ -20,20 +20,77 @@
   content: '';
   height: 1px;
   background: #dddddd;
-
   flex: 1;
   margin-left: 20px;
 }
 
 .allLink {
+  flex-shrink: 0;
   font-weight: 500;
   font-size: 12px;
   line-height: 126%;
   text-align: center;
   text-decoration: none;
   color: #8b8b8b;
-
   border: 1px solid #dddddd;
   padding: 5px 10px;
   border-radius: 4px;
+}
+
+@media (max-width: 900px) {
+  .sales {
+    margin-top: 60px;
+    margin-bottom: 24px;
+    gap: 16px;
+  }
+
+  .title {
+    font-size: 48px;
+  }
+
+  .title::after {
+    margin-left: 16px;
+  }
+}
+
+@media (max-width: 700px) {
+  .sales {
+    margin-top: 48px;
+    margin-bottom: 24px;
+    gap: 12px;
+  }
+
+  .title {
+    font-size: 40px;
+  }
+
+  .title::after {
+    margin-left: 12px;
+  }
+
+  .allLink {
+    font-size: 11px;
+    padding: 5px 8px;
+  }
+}
+
+@media (max-width: 450px) {
+  .sales {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    gap: 10px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .title::after {
+    margin-left: 10px;
+  }
+
+  .allLink {
+    font-size: 10px;
+    padding: 4px 7px;
+  }
 }

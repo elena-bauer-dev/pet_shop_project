@@ -1,11 +1,3 @@
-.title {
-  /* margin-top: 80px;
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 64px;
-  line-height: 110%;
-  color: #282828; */
-}
 .categories {
   margin-top: 40px;
   display: grid;
@@ -13,5 +5,26 @@
   gap: 32px;
 }
 
-.categories_card {
+@media (max-width: 900px) {
+  .categories {
+    margin-top: 32px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+  }
+}
+
+@media (max-width: 700px) {
+  .categories {
+    margin-top: 24px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+}
+
+@media (max-width: 450px) {
+  .categories {
+    margin-top: 20px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
 }

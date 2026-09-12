@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import styles from './ProductGallery.module.css';
 
 function ProductGallery({ images }) {

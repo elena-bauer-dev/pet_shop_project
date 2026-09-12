@@ -2,29 +2,27 @@
   position: relative;
   margin-bottom: 80px;
 }
+
 .inner {
   position: absolute;
   inset: 0;
 }
+
 .bg {
   display: block;
   width: 100%;
-  object-fit: cover;
   height: 600px;
+  object-fit: cover;
 }
 
 .text {
   margin-top: 80px;
   margin-bottom: 40px;
-  font-size: 96px;
-  font-weight: 700;
-  color: #ffffff;
   display: flex;
   flex-wrap: wrap;
   gap: 0 16px;
-
   overflow: hidden;
-
+  font-size: 96px;
   font-weight: 700;
   line-height: 110%;
   color: #fff;
@@ -32,13 +30,9 @@
 
 .text span {
   display: inline-block;
-
   opacity: 0;
-
   animation: bounceIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
-
-/* Последовательное появление слов */
 
 .text span:nth-child(1) {
   animation-delay: 0.1s;
@@ -59,8 +53,6 @@
 .text span:nth-child(5) {
   animation-delay: 0.7s;
 }
-
-/* Падение + отскок */
 
 @keyframes bounceIn {
   0% {
@@ -94,4 +86,70 @@
 .card__btn {
   width: 100%;
   max-width: 218px;
+}
+
+@media (max-width: 1023px) {
+  .promo {
+    margin-bottom: 60px;
+  }
+
+  .bg {
+    height: 450px;
+  }
+
+  .text {
+    margin-top: 60px;
+    margin-bottom: 32px;
+
+    font-size: 64px;
+    line-height: 110%;
+    gap: 0 12px;
+  }
+
+  .card__btn {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 767px) {
+  .promo {
+    margin-bottom: 48px;
+  }
+
+  .bg {
+    height: 360px;
+    object-fit: cover;
+  }
+
+  .text {
+    margin-top: 40px;
+    margin-bottom: 24px;
+    font-size: 42px;
+    line-height: 110%;
+    gap: 0 8px;
+  }
+
+  .card__btn {
+    max-width: 180px;
+  }
+}
+
+@media (max-width: 479px) {
+  .bg {
+    height: 320px;
+  }
+
+  .text {
+    margin-top: 32px;
+    margin-bottom: 20px;
+
+    font-size: 36px;
+    line-height: 110%;
+
+    gap: 0 6px;
+  }
+
+  .card__btn {
+    max-width: 170px;
+  }
 }

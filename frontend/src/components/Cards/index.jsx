@@ -30,11 +30,6 @@ function Cards({ product }) {
           alt={title}
           className={styles.image}
         />
-        {/* <img
-          src={getImageUrl(product.image)}
-          alt={title}
-          className={styles.image}
-        /> */}
 
         {discount && <span className={styles.discount}>-{discount}%</span>}
 
