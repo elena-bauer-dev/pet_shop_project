@@ -64,12 +64,22 @@
 }
 
 .cart {
+  position: relative;
   padding: 0;
   justify-self: end;
   display: grid;
   place-items: center;
   border: none;
   background: none;
+}
+.badge {
+  position: absolute;
+  top: 0;
+  right: -10px;
+  padding: 5px 10px;
+  color: white;
+  background-color: blue;
+  border-radius: 50%;
 }
 .cartIcon {
   width: 48px;

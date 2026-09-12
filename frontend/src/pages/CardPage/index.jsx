@@ -61,9 +61,7 @@ function CardPage() {
           <div className={styles.price}>
             <span className={styles.currentPrice}>${finalPrice}</span>
 
-            {discont_price && (
-              <span className={styles.oldPrice}>${price}</span>
-            )}
+            {discont_price && <span className={styles.oldPrice}>${price}</span>}
 
             {discount && <span className={styles.discount}>-{discount}%</span>}
           </div>

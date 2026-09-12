@@ -5,7 +5,6 @@
   margin-top: 40px;
 }
 
-
 .info {
   width: 100%;
 }
@@ -135,4 +134,14 @@
   text-decoration: underline;
 
   cursor: pointer;
+}
+
+.collapsed {
+  display: -webkit-box;
+  -webkit-line-clamp: 11;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.expanded {
+  display: block;
 }
