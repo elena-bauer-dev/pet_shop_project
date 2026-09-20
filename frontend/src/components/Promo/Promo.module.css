@@ -40,10 +40,20 @@
   background-color: var(--btn-bg);
   border-radius: 6px;
   border: 1px solid #ffffff;
+  color: #ffffff;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .input::placeholder {
   color: #ffffff;
+}
+.input:focus {
+  outline: none;
+  border-color: #ffffff;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
 }
 
 @media (max-width: 900px) {

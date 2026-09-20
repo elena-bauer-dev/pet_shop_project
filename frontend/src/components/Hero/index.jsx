@@ -1,8 +1,10 @@
 import styles from './Home.module.css';
 import BG from '../../assets/bg/img.jpg';
 import Button from '../../Button/index.jsx';
+import { useNavigate } from 'react-router-dom';
 
 export default function Home() {
+  const navigate = useNavigate();
   return (
     <section className={styles.promo}>
       <img
@@ -19,8 +21,8 @@ export default function Home() {
             <span>Pets</span>
             <span>Products!</span>
           </h1>
-          {/* <button className={styles.btn}>Check out</button> */}
           <Button
+            onClick={() => navigate('/cart')}
             variant={'blue'}
             className={styles.card__btn}
           >

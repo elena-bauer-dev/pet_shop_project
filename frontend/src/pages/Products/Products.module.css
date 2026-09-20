@@ -72,3 +72,107 @@
     width: 100%;
   }
 }
+.skeletonGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px;
+
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.skeletonCard {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  min-width: 0;
+}
+
+.skeletonImage {
+  width: 100%;
+  height: 422px;
+
+  border-radius: 12px;
+}
+
+.skeletonTitle {
+  width: 70%;
+  height: 26px;
+
+  margin-top: 20px;
+}
+
+.skeletonPrice {
+  width: 40%;
+  height: 44px;
+
+  margin-top: 16px;
+}
+
+/* =========================
+   900px
+   ========================= */
+
+@media (max-width: 900px) {
+  .skeletonGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .skeletonImage {
+    height: 360px;
+  }
+}
+
+/* =========================
+   700px
+   ========================= */
+
+@media (max-width: 700px) {
+  .skeletonGrid {
+    gap: 16px;
+  }
+
+  .skeletonImage {
+    height: 320px;
+  }
+
+  .skeletonTitle {
+    height: 22px;
+    margin-top: 16px;
+  }
+
+  .skeletonPrice {
+    height: 36px;
+    margin-top: 12px;
+  }
+}
+
+/* =========================
+   450px
+   ========================= */
+
+@media (max-width: 450px) {
+  .skeletonGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .skeletonImage {
+    height: 300px;
+  }
+
+  .skeletonTitle {
+    width: 65%;
+    height: 20px;
+  }
+
+  .skeletonPrice {
+    width: 35%;
+    height: 32px;
+  }
+}

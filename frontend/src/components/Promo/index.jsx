@@ -1,14 +1,22 @@
 import styles from './Promo.module.css';
 import Content from '../../assets/bg/content.png';
 import Button from '../../Button/index.jsx';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
+import Modal from '../Modal/index.jsx';
 
 function Promo() {
   const [submitted, setSubmitted] = useState(false);
 
+  const formRef = useRef(null);
+
   function handleSubmit(e) {
     e.preventDefault();
     setSubmitted(true);
+  }
+
+  function handleCloseModal() {
+    setSubmitted(false);
+    formRef.current?.reset();
   }
 
   return (
@@ -22,6 +30,7 @@ function Promo() {
             alt="Content"
           />
           <form
+            ref={formRef}
             className={styles.form}
             onSubmit={handleSubmit}
           >
@@ -43,7 +52,6 @@ function Promo() {
             <Button
               type="submit"
               variant={submitted ? 'ghost' : 'white'}
-              // disabled={submitted}
               fullWidth
             >
               {submitted ? 'Request Submitted' : 'Get a discount'}
@@ -51,6 +59,16 @@ function Promo() {
           </form>
         </div>
       </div>
+
+      {submitted && (
+        <Modal onClose={handleCloseModal}>
+          <h2>Congratulations!</h2>
+
+          <p>Your request has been successfully submitted.</p>
+
+          <p>We will contact you shortly.</p>
+        </Modal>
+      )}
     </div>
   );
 }

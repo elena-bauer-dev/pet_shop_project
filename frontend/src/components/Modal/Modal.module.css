@@ -1,0 +1,171 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px;
+  z-index: 1000;
+}
+
+.modal {
+  position: relative;
+  box-sizing: border-box;
+
+  width: 548px;
+  min-height: 236px;
+
+  padding: 32px;
+
+  background: #0d50ff;
+  border-radius: 12px;
+}
+
+.modal h2 {
+  margin: 0;
+
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 110%;
+
+  color: #fff;
+}
+
+.modal p {
+  margin: 24px 0 0;
+
+  max-width: 450px;
+
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 110%;
+
+  color: #fff;
+}
+
+.closeButton {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+
+  width: 40px;
+  height: 40px;
+
+  border: none;
+  background: transparent;
+
+  color: #fff;
+
+  font-size: 48px;
+  font-weight: 300;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition: transform 0.2s ease;
+}
+
+.closeButton:hover {
+  transform: scale(1.1);
+}
+
+/* =========================
+   900px
+   ========================= */
+
+@media (max-width: 900px) {
+  .modal {
+    width: 520px;
+    min-height: 220px;
+    padding: 28px;
+  }
+
+  .modal h2 {
+    font-size: 36px;
+  }
+
+  .modal p {
+    font-size: 18px;
+  }
+
+  .closeButton {
+    top: 20px;
+    right: 20px;
+    font-size: 44px;
+  }
+}
+
+/* =========================
+   700px
+   ========================= */
+
+@media (max-width: 700px) {
+  .modal {
+    width: 100%;
+    max-width: 520px;
+    min-height: auto;
+    padding: 24px;
+  }
+
+  .modal h2 {
+    font-size: 32px;
+    padding-right: 40px;
+  }
+
+  .modal p {
+    font-size: 18px;
+    line-height: 120%;
+  }
+
+  .closeButton {
+    top: 16px;
+    right: 16px;
+
+    width: 36px;
+    height: 36px;
+
+    font-size: 40px;
+  }
+}
+
+/* =========================
+   450px
+   ========================= */
+
+@media (max-width: 450px) {
+  .overlay {
+    padding: 12px;
+  }
+
+  .modal {
+    width: 100%;
+    max-width: none;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .modal h2 {
+    font-size: 28px;
+    line-height: 110%;
+    padding-right: 36px;
+  }
+
+  .modal p {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 130%;
+  }
+
+  .closeButton {
+    top: 12px;
+    right: 12px;
+
+    width: 32px;
+    height: 32px;
+
+    font-size: 36px;
+  }
+}

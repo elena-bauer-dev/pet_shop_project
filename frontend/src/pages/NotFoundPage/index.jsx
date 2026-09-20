@@ -3,13 +3,14 @@ import errorImage from '../../assets/icons/errorImage.svg';
 import styles from './NotFoundPage.module.css';
 import { useState } from 'react';
 import Button from '../../Button';
+import { useNavigate } from 'react-router-dom';
 
 function NotFoundPage() {
   const [submitted, setSubmitted] = useState(false);
+  const navigate = useNavigate();
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    setSubmitted(true);
+  function handleGoHome(e) {
+    navigate('/');
   }
   return (
     <section className="container">
@@ -42,7 +43,7 @@ function NotFoundPage() {
         <Button
           className={styles.card__btn}
           type="button"
-          onClick={handleSubmit}
+          onClick={handleGoHome}
           variant={submitted ? 'white' : 'blue'}
           fullWidth
         >

@@ -8,6 +8,7 @@ import ProductGrid from '../../components/ProductGrid';
 import { useFilteredProducts } from '../../hooks/useFilteredProducts';
 import { fetchCategoryProducts } from '../../store/categoriesSlice';
 import styles from './CategoryProducts.module.css';
+import Skeleton from '../../UI/Skeleton';
 
 function CategoryProducts() {
   const { id } = useParams();
@@ -30,7 +31,32 @@ function CategoryProducts() {
   if (currentStatus === 'loading') {
     return (
       <div className="container">
-        <p>Загрузка…</p>
+        <Breadcrumbs
+          items={[
+            { label: 'Main page', to: '/' },
+            { label: 'Categories', to: '/categories' },
+            { label: current?.title || 'Category' },
+          ]}
+        />
+
+        <h1 className={styles.title}>{current?.title || 'Category'}</h1>
+
+        <Filter />
+
+        <ul className={styles.skeletonGrid}>
+          {Array.from({ length: 8 }).map((_, index) => (
+            <li
+              key={index}
+              className={styles.skeletonCard}
+            >
+              <Skeleton className={styles.skeletonImage} />
+
+              <Skeleton className={styles.skeletonTitle} />
+
+              <Skeleton className={styles.skeletonPrice} />
+            </li>
+          ))}
+        </ul>
       </div>
     );
   }

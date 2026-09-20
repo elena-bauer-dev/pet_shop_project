@@ -1,30 +1,9 @@
-.categoryPage {
-  width: 100%;
-}
-
-.categoryPage :global(.crumbs) {
-  margin-bottom: 24px;
-}
-
-.title {
-  margin: 0 0 40px;
-
-  font-size: 64px;
-  line-height: 110%;
-  font-weight: 700;
-
-  color: #282828;
-}
 .skeletonGrid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 32px;
 
   width: 100%;
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
 }
 
 .skeletonCard {
@@ -34,24 +13,18 @@
 
 .skeletonImage {
   width: 100%;
-  height: 422px;
+  height: 300px;
 
   border-radius: 12px;
 }
 
 .skeletonTitle {
-  width: 70%;
+  width: 65%;
   height: 26px;
 
   margin-top: 20px;
 }
 
-.skeletonPrice {
-  width: 40%;
-  height: 44px;
-
-  margin-top: 16px;
-}
 
 /* 900px */
 
@@ -62,9 +35,10 @@
   }
 
   .skeletonImage {
-    height: 360px;
+    height: 280px;
   }
 }
+
 
 /* 700px */
 
@@ -74,19 +48,15 @@
   }
 
   .skeletonImage {
-    height: 320px;
+    height: 240px;
   }
 
   .skeletonTitle {
     height: 22px;
     margin-top: 16px;
   }
-
-  .skeletonPrice {
-    height: 36px;
-    margin-top: 12px;
-  }
 }
+
 
 /* 450px */
 
@@ -97,16 +67,11 @@
   }
 
   .skeletonImage {
-    height: 300px;
+    height: 260px;
   }
 
   .skeletonTitle {
-    width: 65%;
+    width: 60%;
     height: 20px;
-  }
-
-  .skeletonPrice {
-    width: 35%;
-    height: 32px;
   }
 }
