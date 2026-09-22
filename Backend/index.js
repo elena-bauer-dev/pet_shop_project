@@ -13,6 +13,10 @@ const PORT = process.env.PORT || 3333;
 Category.hasMany(Product);
 
 const app = express();
+app.get('/test', (req, res) => {
+  res.json({ status: 'ok' });
+});
+
 app.use(express.static('public'));
 app.use(
   cors({
@@ -45,4 +49,3 @@ const start = async () => {
   }
 };
 start();
-
