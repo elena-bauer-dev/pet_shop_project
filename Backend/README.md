@@ -119,3 +119,5 @@ axios.post('http://localhost:3333/order/send', orderData, {
 - SQLite
 - Cors
 - Axios
+
+<!-- GitHub Pages deployment -->
