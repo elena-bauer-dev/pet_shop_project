@@ -62,9 +62,9 @@ function Promo() {
 
       {submitted && (
         <Modal onClose={handleCloseModal}>
-          <h2>Congratulations!</h2>
+          <h2>Thank you!</h2>
 
-          <p>Your request has been successfully submitted.</p>
+          <p>Your discount request has been successfully submitted.</p>
 
           <p>We will contact you shortly.</p>
         </Modal>
